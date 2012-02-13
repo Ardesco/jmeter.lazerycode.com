@@ -1,0 +1,48 @@
+<div id="sidebar_container">
+    <img class="paperclip" src="/assets/images/paperclip.png" alt="paperclip"/>
+
+    <div class="sidebar">
+        <h3>Twitter Feed</h3>
+
+        <p>
+            <script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
+            <script>
+                new TWTR.Widget({
+                    version:2,
+                    type:'profile',
+                    rpp:6,
+                    interval:30000,
+                    width:250,
+                    height:300,
+                    theme:{
+                        shell:{
+                            background:'#fbfbfb',
+                            color:'#444444'
+                        },
+                        tweets:{
+                            background:'#000000',
+                            color:'#ffffff',
+                            links:'#4aed05'
+                        }
+                    },
+                    features:{
+                        scrollbar:true,
+                        loop:false,
+                        live:true,
+                        behavior:'all'
+                    }
+                }).render().setUser('LazeryCode').start();
+            </script>
+        </p>
+    </div>
+    <img class="paperclip" src="/assets/images/paperclip.png" alt="paperclip"/>
+
+    <div class="sidebar">
+        <h3>Links</h3>
+
+        <p><a href="https://github.com/Ronnie76er/jmeter-maven-plugin" target="_blank">Code on GitHub</a></p>
+        <p><a href="http://ci.lazerycode.com" target="_blank">CI Server</a></p>
+        <p><a href="http://groups.google.com/group/maven-jmeter-plugin-users" target="_blank">maven-jmeter-plugin-users group</a></p>
+        <p><a href="http://groups.google.com/group/maven-jmeter-plugin-devs" target="_blank">maven-jmeter-plugin-devs group</a></p>
+    </div>
+</div>

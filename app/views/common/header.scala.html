@@ -1,14 +1,14 @@
+@(currentPage:String)
+
 <div id="header">
     <div id="logo">
         <h1>jmeter-maven-plugin</h1>
-
-        <div class="slogan">Lazery Code</div>
     </div>
     <div id="menubar">
         <ul id="menu">
-            <!-- need to dynamically set class="current" -->
-            <li class="current"><a href="index.html">Home</a></li>
-            <li><a href="#">Contact Us</a></li>
+            <li@if(currentPage == "home"){ class="current"}><a href="/">Home</a></li>
+            <li@if(currentPage == "documentation"){ class="current"}><a href="/documentation">Documentation</a></li>
+            <li@if(currentPage == "contact"){ class="current"}><a href="#">Contact Us</a></li>
         </ul>
     </div>
 </div>

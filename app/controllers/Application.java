@@ -15,10 +15,11 @@ public class Application extends Controller {
         return ok(index.render(sidebarElements));
     }
 
-    public static Result documentation() {
+    public static Result documentation(String version, String page) {
+        version = "version" + version.replaceAll("\\.", "_");
         ArrayList sidebarElements = new ArrayList();
         sidebarElements.add("twitter");
-        return ok(documentation.render(sidebarElements));
+        return ok(documentation.render(sidebarElements, page));
     }
 
 }

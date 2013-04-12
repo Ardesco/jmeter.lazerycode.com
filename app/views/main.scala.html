@@ -1,36 +1,39 @@
-@(title:String, options:List[String], currentPage:String)(content: Html)
+@(title: String)(content: Html)
 
-<!DOCTYPE HTML>
+<!DOCTYPE html>
+
 <html>
     <head>
         <title>@title</title>
-        <meta name="description" content="Project home for the JMeter Maven Plugin."/>
-        <meta name="keywords" content="jmeter, maven, plugin, jmeter-plugin, jmeter-maven-plugin"/>
-        <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine&amp;v1"/>
-        <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz"/>
         <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/main.css")">
         <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
-        <script src="@routes.Assets.at("javascripts/jquery-1.7.1.min.js")" type="text/javascript"></script>
+        <script src="@routes.Assets.at("javascripts/jquery-1.9.0.min.js")" type="text/javascript"></script>
     </head>
     <body>
-        <div id="main">
-            @common.header(currentPage)
-            <div id="site_content">
-                @common.sidebar(options)
-                @content
-            </div>
-        </div>
+        @content
+    <!-- Github Link -->
+    <span id="forkongithub">
+        <a href="https://github.com/Ronnie76er/jmeter-maven-plugin">Fork me on GitHub</a>
+    </span>
+    <!-- End Github Link -->
     <!-- Piwik -->
     <script type="text/javascript">
     var pkBaseURL = (("https:" == document.location.protocol) ? "https://piwik.ardescosolutions.com/" : "http://piwik.ardescosolutions.com/");
     document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
-        </script><script type="text/javascript">
-        try {
-            var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 10);
-            piwikTracker.trackPageView();
-            piwikTracker.enableLinkTracking();
-        } catch( err ) {}
-    </script><noscript><p><img src="http://piwik.ardescosolutions.com/piwik.php?idsite=10" style="border:0" alt="" /></p></noscript>
+        </script>
+        <script type="text/javascript">
+            try {
+                var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 10);
+                piwikTracker.trackPageView();
+                piwikTracker.enableLinkTracking();
+            } catch (err) {
+            }
+        </script>
+    <noscript>
+        <p>
+            <img src="http://piwik.ardescosolutions.com/piwik.php?idsite=10" style="border:0" alt=""/>
+        </p>
+    </noscript>
     <!-- End Piwik Tracking Code -->
     </body>
 </html>

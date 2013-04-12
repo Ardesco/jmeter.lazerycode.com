@@ -1,41 +1,53 @@
-@(options: List[String])
+@(message: String)
 
-@main(title = "JMeter Maven Plugin", options, currentPage = "home") {
+@main("Welcome to Play 2.1") {
 
-<div id="content">
-    <h1>JMeter Maven Plugin</h1>
+<div class="container">
+    <div id="content">
+        <h1>JMeter Maven Plugin</h1>
 
-    <h4>The JMeter Maven Plugin Version 1.4 Has Been Released</h4>
-    <br/>
-    <p>Version 1.4 of the plugin has been released and it is now available from the main central maven repository, you no longer need to specify a repository to use in in your project. See the <a href="releasenotes.txt">release notes</a>.</p>
+        <p>The JMeter Maven Plugin allows you to run your automated JMeter tests through Maven.</p>
 
-    <h4>How To Add The Plugin To The Build Section Of Your POM File</h4>
+        <p>For more information, please visit:</p>
 
+        <ul>
+            <li><a href="https://github.com/Ronnie76er/jmeter-maven-plugin/wiki">Wiki</a></li>
+            <li><a href="https://github.com/Ronnie76er/jmeter-maven-plugin/wiki/Basic-Configuration">Basic Configuration</a></li>
+            <li><a href="https://github.com/Ronnie76er/jmeter-maven-plugin/wiki/Release-Notes">Release Notes</a></li>
+        </ul>
+    </div>
+    <div id="twitter">
+    <h3>Twitter Feed</h3>
     <p>
-        <br/>
-        &lt;plugin&gt;<br/>
-        &nbsp;&nbsp;&nbsp;&nbsp;&lt;groupId&gt;com.lazerycode.jmeter&lt;/groupId&gt;<br/>
-        &nbsp;&nbsp;&nbsp;&nbsp;&lt;artifactId&gt;jmeter-maven-plugin&lt;/artifactId&gt;<br/>
-
-        &nbsp;&nbsp;&nbsp;&nbsp;&lt;version&gt;1.4&lt;/version&gt;<br/>
-        &nbsp;&nbsp;&nbsp;&nbsp;&lt;executions&gt;<br/>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;execution&gt;<br/>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;id&gt;jmeter-tests&lt;/id&gt;<br/>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;phase&gt;verify&lt;/phase&gt;<br/>
-
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;goals&gt;<br/>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;goal&gt;jmeter&lt;/goal&gt;<br/>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/goals&gt;<br/>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/execution&gt;<br/>
-        &nbsp;&nbsp;&nbsp;&nbsp;&lt;/executions&gt;<br/>
-
-        &lt;/plugin&gt;
+        <script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
+        <script>
+            new TWTR.Widget({
+                version:2,
+                type:'profile',
+                rpp:6,
+                interval:30000,
+                width:250,
+                height:300,
+                theme:{
+                    shell:{
+                        background:'#fbfbfb',
+                        color:'#444444'
+                    },
+                    tweets:{
+                        background:'#000000',
+                        color:'#ffffff',
+                        links:'#4aed05'
+                    }
+                },
+                features:{
+                    scrollbar:true,
+                    loop:false,
+                    live:true,
+                    behavior:'all'
+                }
+            }).render().setUser('LazeryCode').start();
+        </script>
     </p>
-
-    <h4>More Information</h4>
-    <br/>
-    <p>This site is still under construction and doesn't yet have all of the plugin information that is available.  For more detailed information clone the project from github and perform a mvn site:run.  You can then access the current documentation via <a href="http://localhost:8080
-" target="_blank">http://localhost:8080</a>.
+    </div>
 </div>
-
 }

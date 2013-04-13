@@ -13,7 +13,7 @@
 }
 
 #forkongithub a:hover {
-    background: #990033;
+    background: darkred;
     color: #fff;
 }
 
@@ -38,7 +38,7 @@
         position: absolute;
         display: block;
         top: 0;
-        right: 0;
+        left: 0;
         width: 200px;
         overflow: hidden;
         height: 200px;
@@ -48,17 +48,28 @@
         width: 200px;
         position: absolute;
         top: 60px;
-        right: -60px;
-        transform: rotate(45deg);
-        -webkit-transform: rotate(45deg);
+        left: -60px;
+        transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
         box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8);
     }
 }
 
 body {
     background-color: #333;
+    color: lightgray;
+    font-family: arial;
+    font-size: small;
 }
 
+a{
+    color: lime;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
 #twitter {
     float: right;
     width: 350px;
@@ -66,11 +77,29 @@ body {
 
 #content {
     float: left;
-    width: calc(100% -350px);
+    max-width: calc(100% - 460px);
     padding: 10px;
+    padding-top: 35px;
+    padding-left: 100px;
 }
 
-#body {
-    width: 100%;
-    min-width: 950px;
+.container {
+   min-width: 1000px;
+}
+
+h1{
+    text-align: center;
+    font-family: 'Nothing You Could Do', cursive;
+    color: darkred;
+}
+
+#twitter > div {
+    margin: 0 auto;
+    width: 250px;
+    padding-top: 50px;
+}
+
+.version {
+    font-weight: bold;
+    color: white;
 }

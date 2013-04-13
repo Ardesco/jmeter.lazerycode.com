@@ -89,8 +89,14 @@ a:hover {
 
 h1{
     text-align: center;
-    font-family: 'Nothing You Could Do', cursive;
+    font-family: 'Oleo Script', cursive;
+    font-size: xx-large;
     color: darkred;
+    text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
 }
 
 #twitter > div {

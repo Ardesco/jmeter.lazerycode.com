@@ -77,10 +77,17 @@ a:hover {
 
 #content {
     float: left;
+    width: 100%;
     max-width: calc(100% - 460px);
     padding: 10px;
     padding-top: 35px;
     padding-left: 100px;
+}
+
+#content > div {
+    margin: 0 auto;
+    width:50%;
+    min-width: 500px;
 }
 
 .container {

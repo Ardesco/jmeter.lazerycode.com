@@ -86,7 +86,7 @@ a:hover {
 
 #content > div {
     margin: 0 auto;
-    width:50%;
+    width:70%;
     min-width: 500px;
 }
 
@@ -94,11 +94,9 @@ a:hover {
    min-width: 1000px;
 }
 
-h1{
-    text-align: center;
+h1, h2, h3{
     font-family: 'Oleo Script', cursive;
-    font-size: xx-large;
-    color: darkred;
+    color: darkkhaki;
     text-shadow:
         -1px -1px 0 #000,
         1px -1px 0 #000,
@@ -106,13 +104,33 @@ h1{
         1px 1px 0 #000;
 }
 
+h1 {
+    font-size: xx-large;
+    text-align: center;
+    color: darkred;
+}
+
+h2 {
+    font-size: x-large;
+}
+
+h3{
+    color: slategrey;
+}
+
 #twitter > div {
     margin: 0 auto;
     width: 250px;
-    padding-top: 50px;
+    padding-top: 100px;
 }
 
 .version {
     font-weight: bold;
     color: white;
+}
+
+pre {
+    background: #000000;
+    padding: 10px;
+    border-radius: 0.5em;
 }
